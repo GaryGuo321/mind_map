@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>interview</title>
+    <style type="text/css">
+    h4 {
+        color: red;
+    }
+    
+    pre {
+        background-color: #e4e4e4;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>css相关部分</h1>
+    <h4>display:none和visibility:hidden的区别？</h4>
+    <pre>display:none 隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。
+visibility:hidden 隐藏对应的元素，但是在文档布局中仍保留原来的空间。</pre>
+    <h4>CSS中 link 和@import 的区别是？</h4>
+    <pre>(1) link属于HTML标签，而@import是CSS提供的; 
+(2) 页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;
+(3) import只在IE5以上才能识别，而link是HTML标签，无兼容问题; 
+(4) link方式的样式的权重 高于@import的权重.</pre>
+    <h4>position的absolute与fixed共同点与不同点</h4>
+    <pre>A：共同点：
+1.改变行内元素的呈现方式，display被置为block；2.让元素脱离普通流，不占据空间；3.默认会覆盖到非定位元素上
+ 
+B不同点：
+absolute的”根元素“是可以设置的，而fixed的”根元素“固定为浏览器窗口。当你滚动网页，fixed元素与浏览器窗口之间的距离是不变的。  </pre>
+    <h4>介绍一下CSS的盒子模型？</h4>
+    <pre>1）有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 padding;
+ 
+2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).</pre>
+    <h4>CSS 选择符有哪些？</h4>
+    <pre>
+        1.id选择器（ # myid）
+        2.类选择器（.myclassname）
+        3.标签选择器（div, h1, p）
+        4.相邻选择器（h1 + p）
+        5.子选择器（ul > li）
+        6.后代选择器（li a）
+        7.通配符选择器（ * ）
+        8.属性选择器（a[rel = "external"]）
+        9.伪类选择器（a: hover, li:nth-child）</pre>
+    <h4>css定义的权重</h4>
+    <pre>
+        !important > 内联(1000) > ID(100) > Class(10) > 标签｜伪类｜属性选择器(1) > 伪对象 > 继承 > 通配符
+        选择器优先级不要写太高有利于后期的维护</pre>
+    <h4>列出display的值，说明他们的作用。position的值， relative和absolute分别是相对于谁进行定位的？</h4>
+    <pre>
+  1.   
+  block 象块类型元素一样显示。
+  inline 缺省值。象行内元素类型一样显示。
+  inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。
+  list-item 象块类型元素一样显示，并添加样式列表标记。
+ 
+  2. 
+  *absolute 生成绝对定位的元素，相对于 static 定位以外的第一个祖先元素进行定位。 
+ 
+  *fixed （老IE不支持）生成绝对定位的元素，相对于浏览器窗口进行定位。 
+ 
+  *relative 生成相对定位的元素，相对于其在普通流中的位置进行定位。 
+ 
+  * static  默认值。没有定位，元素出现在正常的流中
+  *（忽略 top, bottom, left, right z-index 声明）。
+ 
+  * inherit 规定从父元素继承 position 属性的值。</pre>
+    <h4>CSS3有哪些新特性？</h4>
+    <pre>
+CSS3实现圆角（border-radius），阴影（box-shadow），
+对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+增加了更多的CSS选择器  多背景 rgba 
+在CSS3中唯一引入的伪元素是::selection.
+媒体查询，多栏布局
+border-image</pre>
+    <h4>为什么要初始化CSS样式。</h4>
+    <pre>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。
+ 
+当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。
+ 
+*最简单的初始化方法就是： * {padding: 0; margin: 0;} （不建议）</pre>
+    <h4>解释下 CSS sprites，以及你要如何在页面或网站中使用它。</h4>
+    <pre>CSS Sprites其实就是把网页中一些背景图片整合到一张图片文件中，再利用CSS的“background-
+image”，“background- repeat”，“background-position”的组合进行背景定位，background-position可以用数
+字能精确的定位出背景图片的位置。这样可以减少很多图片请求的开销，因为请求耗时比较长；请求虽然可以并发，但是也有限制
+，一般浏览器都是6个。对于未来而言，就不需要这样做了，因为有了`http2`。</pre>
+    <h4>单列布局，两列布局，三列布局，多列布局</h4>
+    <pre></pre>
+    <h4>伸缩盒模型</h4>
+    <pre></pre>
+    <h4>怪异盒模型和普通盒模型</h4>
+    <pre></pre>
+    <h4>css hack</h4>
+    <pre></pre>
+    <h4>css动画，css 3D，</h4>
+    <pre></pre>
+    <h1>HTML相关部分</h1>
+    <h4>说说你对语义化的理解？</h4>
+    <pre>1.去掉或者丢失样式的时候能够让页面呈现出清晰的结构
+2.有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+3.方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+4.便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。</pre>
+    <h4>Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</h4>
+    <pre>（1）.<!DOCTYPE> 声明位于文档中的最前面，处于 html 标签之前。告知浏览器以何种模式来渲染文档。 
+ 
+（2）.严格模式的排版和 JS 运作模式是  以该浏览器支持的最高标准运行。
+ 
+（3）.在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。
+ 
+（4）.DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。</pre>
+    <h4>你知道多少种Doctype文档类型？</h4>
+    <pre>该标签可声明三种 DTD 类型，分别表示严格版本、过渡版本以及基于框架的 HTML 文档。
+HTML 4.01 规定了三种文档类型：Strict、Transitional 以及 Frameset。
+XHTML 1.0 规定了三种 XML 文档类型：Strict、Transitional 以及 Frameset。
+Standards （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，而 Quirks
+（包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页。</pre>
+    <h4>HTML与XHTML——二者有什么区别</h4>
+    <pre>区别：
+1.所有的标记都必须要有一个相应的结束标记
+2.所有标签的元素和属性的名字都必须使用小写
+3.所有的XML标记都必须合理嵌套
+4.所有的属性必须用引号""括起来
+5.把所有<和&特殊符号用编码表示
+6.给所有属性赋一个值
+7.不要在注释内容中使“--”
+8.图片必须有说明文字</pre>
+    <h4>常见兼容性问题？</h4>
+    <pre>* png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.也可以引用一段脚本处理.
+ 
+* 浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。
+ 
+* IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。 
+ 
+* 浮动ie产生的双倍距离（IE6双边距问题：在IE6下，如果对元素设置了浮动，同时又设置了margin-left或margin-right，margin值会加倍。）
+  #box{ float:left; width:10px; margin:0 0 0 100px;} 
+ 
+ 这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)
+ 
+*  渐进识别的方式，从总体中逐渐排除局部。 
+ 
+  首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。 
+  接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。
+ 
+  css
+      .bb{
+       background-color:#f1ee18;/*所有识别*/
+      .background-color:#00deff\9; /*IE6、7、8识别*/
+      +background-color:#a200ff;/*IE6、7识别*/
+      _background-color:#1e0bd1;/*IE6识别*/ 
+      } 
+ 
+*  IE下,可以使用获取常规属性的方法来获取自定义属性,
+   也可以使用getAttribute()获取自定义属性;
+   Firefox下,只能使用getAttribute()获取自定义属性. 
+   解决方法:统一通过getAttribute()获取自定义属性.
+ 
+* IE下,event对象有x,y属性,但是没有pageX,pageY属性; 
+  Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.
+ 
+* 解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。
+ 
+* Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示, 
+  可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决.
+ 
+* 超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:
+L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
+ 
+* 怪异模式问题：漏写DTD声明，Firefox仍然会按照标准模式来解析网页，但在IE中会触发怪异模式。为避免怪异模式给我们带来不必要的麻烦，最好养成书写DTD声明的好习惯。现在可以使用[html5](http://www.w3.org/TR/html5/single-page.html)推荐的写法：`&lt;doctype html&gt;`
+* 上下margin重合问题
+ie和ff都存在，相邻的两个div的margin-left和margin-right不会重合，但是margin-top和margin-bottom却会发生重合。
+解决方法，养成良好的代码编写习惯，同时采用margin-top或者同时采用margin-bottom。</pre>
+    <h4>解释下浮动和它的工作原理？清除浮动的技巧</h4>
+    <pre>浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。
+ 
+1.使用空标签清除浮动。
+   这种方法是在所有浮动标签后面添加一个空标签 定义css clear:both. 弊端就是增加了无意义标签。
+2.使用overflow。
+   给包含浮动元素的父标签添加css属性 overflow:auto; zoom:1; zoom:1用于兼容IE6。
+3.使用after伪对象清除浮动。
+   该方法只适用于非IE浏览器。具体写法可参照以下示例。使用中需注意以下几点。一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；</pre>
+    <h4>浮动元素引起的问题和解决办法？</h4>
+    <pre>浮动元素引起的问题：
+（1）父元素的高度无法被撑开，影响与父元素同级的元素
+（2）与浮动元素同级的非浮动元素会跟随其后
+（3）若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构</pre>
+    <h4>清除浮动的几种方法：</h4>
+    <pre>1.额外标签法，<div style="clear:both;"></div>（缺点：不过这个办法会增加额外的标签使HTML结构看起来不够简洁。）
+2.使用after伪类
+ 
+#parent:after{
+    content:".";
+    height:0;
+    visibility:hidden;
+    display:block;
+    clear:both;
+    }
+ 
+3.浮动外部元素
+4.设置`overflow`为`hidden`或者auto</pre>
+    <h4>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h4>
+    <pre>* HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+ 
+* 拖拽释放(Drag and drop) API 
+  语义化更好的内容标签（header,nav,footer,aside,article,section）
+  音频、视频API(audio,video)
+  画布(Canvas) API
+  地理(Geolocation) API
+  本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；
+  sessionStorage 的数据在浏览器关闭后自动删除
+ 
+  表单控件，calendar、date、time、email、url、search  
+  新的技术webworker, websocket, Geolocation
+ 
+* 移除的元素
+ 
+纯表现的元素：basefont，big，center，font, s，strike，tt，u；
+ 
+对可用性产生负面影响的元素：frame，frameset，noframes；
+ 
+支持HTML5新标签：
+ 
+* IE8/IE7/IE6支持通过document.createElement方法产生的标签，
+  可以利用这一特性让这些浏览器支持HTML5新标签，
+ 
+  浏览器支持新标签后，还需要添加标签默认的样式：
+ 
+* 当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架
+   <!--[if lt IE 9]> 
+   <script> src="http://html5shim.googlecode.com/svn/trunk/html5.js"</script> 
+   <![endif]--> 
+如何区分： DOCTYPE声明\新增的结构元素\功能元素</pre>
+    <h1>JavaScript相关部分</h1>
+    <h4>DOM操作——怎样添加、移除、移动、复制、创建和查找节点。</h4>
+    <pre>(1）创建新节点
+ 
+      createDocumentFragment()    //创建一个DOM片段
+ 
+      createElement()   //创建一个具体的元素
+ 
+      createTextNode()   //创建一个文本节点
+ 
+（2）添加、移除、替换、插入
+ 
+      appendChild()
+ 
+      removeChild()
+ 
+      replaceChild()
+ 
+      insertBefore() //在已有的子节点前插入一个新的子节点
+ 
+（3）查找
+ 
+      getElementsByTagName()    //通过标签名称
+ 
+      getElementsByName()    //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)
+ 
+      getElementById()    //通过元素Id，唯一性</pre>
+    <h4>如何实现浏览器内多个标签页之间的通信?</h4>
+    <pre>调用localstorge、cookies等本地存储方式</pre>
+    <h4>webSocket如何兼容低浏览器？</h4>
+    <pre>Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR</pre>
+    <h4>线程与进程的区别</h4>
+    <pre>一个程序至少有一个进程,一个进程至少有一个线程. 
+线程的划分尺度小于进程，使得多线程程序的并发性高。 
+另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。 
+线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。 
+从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。</pre>
+    <h4>你如何对网站的文件和资源进行优化？</h4>
+    <pre>期待的解决方案包括：
+ 文件合并
+ 文件最小化/文件压缩
+ 使用 CDN 托管
+ 缓存的使用（多个域名来提供缓存）
+ 其他</pre>
+    <h4>请说出三种减少页面加载时间的方法。</h4>
+    <pre>1.优化图片 
+ 2.图像格式的选择（GIF：提供的颜色较少，可用在一些对颜色要求不高的地方） 
+ 3.优化CSS（压缩合并css，如margin-top,margin-left...) 
+ 4.网址后加斜杠（如www.campr.com/目录，会判断这个“目录是什么文件类型，或者是目录。） 
+ 5.标明高度和宽度（如果浏览器没有找到这两个参数，它需要一边下载图片一边计算大小，如果图片很多，浏览器需要不断地调整页面。这不但影响速度，也影响浏览体验。 
+当浏览器知道了高度和宽度参数后，即使图片暂时无法显示，页面上也会腾出图片的空位，然后继续加载后面的内容。从而加载时间快了，浏览体验也更好了。） 
+ 
+ 6.减少http请求（合并文件，合并图片）。</pre>
+    <h4>你都使用哪些工具来测试代码的性能？</h4>
+    <pre>Profiler, JSPerf（http://jsperf.com/nexttick-vs-setzerotimeout-vs-settimeout）, Dromaeo</pre>
+    <h4>什么是 FOUC（无样式内容闪烁）？你如何来避免 FOUC？</h4>
+    <pre>FOUC - Flash Of Unstyled Content 文档样式闪烁
+而引用CSS文件的@import就是造成这个问题的罪魁祸首。IE会先加载整个HTML文档的DOM，然后再去导入外部的CSS文件，因此，在页面DOM加载完成到CSS导入完成中间会有一段时间页面上的内容是没有样式的，这段时间的长短跟网速，电脑速度都有关系。
+ 解决方法简单的出奇，只要在head之间加入一个link或者script元素就可以了。</pre>
+    <h4>null和undefined的区别？</h4>
+    <pre>null是一个表示”无”的对象，转为数值时为0；undefined是一个表示”无”的原始值，转为数值时为NaN。
+
+当声明的变量还未被初始化时，变量的默认值为undefined。 null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+
+undefined表示”缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：
+
+变量被声明了，但没有赋值时，就等于undefined。
+ 
+调用函数时，应该提供的参数没有提供，该参数等于undefined。
+ 
+对象没有赋值的属性，该属性的值为undefined。
+ 
+函数没有返回值时，默认返回undefined。
+null表示”没有对象”，即该处不应该有值。典型用法是：
+
+作为函数的参数，表示该函数的参数不是对象。
+ 
+作为对象原型链的终点。</pre>
+    <h4>new操作符具体干了什么呢?</h4>
+    <pre> 1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+   2、属性和方法被加入到 this 引用的对象中。
+   3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+ 
+var obj  = {};
+obj.__proto__ = Base.prototype;
+Base.call(obj); </pre>
+    <h4>JSON 的了解？</h4>
+    <pre>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。
+它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小
+{'age':'12', 'name':'back'}</pre>
+    <h4>js延迟加载的方式有哪些？</h4>
+    <pre>defer和async、动态创建DOM方式（创建script，插入到DOM中，加载完毕后callBack）、按需异步载入js</pre>
+    <h4>如何解决跨域问题?</h4>
+    <pre>jsonp、 document.domain+iframe、window.name、window.postMessage、服务器上设置代理页面
+ 
+jsonp的原理是动态插入script标签</pre>
+    <h4>documen.write和 innerHTML的区别</h4>
+    <pre>document.write只能重绘整个页面
+ 
+innerHTML可以重绘页面的一部分</pre>
+    <h4>.call() 和 .apply() 的区别和作用？</h4>
+    <pre>作用：动态改变某个类的某个方法的运行环境。 </pre>
+    <h4>哪些操作会造成内存泄漏？</h4>
+    <pre>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。
+垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。
+ 
+setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。
+闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）</pre>
+    <h4>JavaScript中的作用域与变量声明提升？</h4>
+    <pre></pre>
+    <h4>如何判断当前脚本运行在浏览器还是node环境中？</h4>
+    <pre>通过判断Global对象是否为window，如果不为window，当前脚本没有运行在浏览器中</pre>
+    <h4>你有哪些性能优化的方法？</h4>
+    <pre>（1） 减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。
+ 
+  （2） 前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数
+ 
+  （3） 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。
+ 
+  （4） 当需要设置的样式很多时设置className而不是直接操作style。
+ 
+  （5） 少用全局变量、缓存DOM节点查找的结果。减少IO读取操作。
+ 
+  （6） 避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)。
+ 
+  （7） 图片预加载，将样式表放在顶部，将脚本放在底部  加上时间戳。</pre>
+    <h4>http状态码有那些？分别代表是什么意思？</h4>
+    <pre>100-199 用于指定客户端应相应的某些动作。 
+200-299 用于表示请求成功。 
+300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。 
+400-499 用于指出客户端的错误。400    1、语义有误，当前请求无法被服务器理解。401   当前请求需要用户验证 403  服务器已经理解请求，但是拒绝执行它。
+500-599 用于支持服务器错误。 503 – 服务不可用</pre>
+    <h4>一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</h4>
+    <pre>分为4个步骤：
+（1），当发送一个URL请求时，不管这个URL是Web页面的URL还是Web页面上每个资源的URL，浏览器都会开启一个线程来处理这个请求，同时在远程DNS服务器上启动一个DNS查询。这能使浏览器获得请求对应的IP地址。
+（2）， 浏览器与远程Web服务器通过TCP三次握手协商来建立一个TCP/IP连接。该握手包括一个同步报文，一个同步-应答报文和一个应答报文，这三个报文在 浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。
+（3），一旦TCP/IP连接建立，浏览器会通过该连接向远程服务器发送HTTP的GET请求。远程服务器找到资源并使用HTTP响应返回该资源，值为200的HTTP响应状态表示一个正确的响应。
+（4），此时，Web服务器提供资源服务，客户端开始下载资源。</pre>
+    <h4>平时如何管理你的项目？</h4>
+    <pre>先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等；
+ 
+编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；
+ 
+标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；
+ 
+页面进行标注（例如 页面 模块 开始和结束）；
+ 
+CSS跟HTML 分文件夹并行存放，命名都得统一（例如style.css）；
+ 
+JS 分文件夹存放 命名以该JS功能为准的英文翻译。
+ 
+图片采用整合的 images.png png8 格式文件使用 尽量整合在一起使用方便将来的管理</pre>
+    <h4>javascript对象的几种创建方式</h4>
+    <pre>1.工厂模式
+2.构造函数模式
+3.原型模式
+4.混合构造函数和原型模式
+5.动态原型模式
+6.寄生构造函数模式
+7.稳妥构造函数模式</pre>
+    <h4>javascript继承的6种方法</h4>
+    <pre>1.原型链继承
+2.借用构造函数继承
+3.组合继承(原型+借用构造)
+4.原型式继承
+5.寄生式继承
+6.寄生组合式继承</pre>
+    <h4>ajax过程</h4>
+    <pre>(1)创建XMLHttpRequest对象,也就是创建一个异步调用对象.
+ 
+(2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
+ 
+(3)设置响应HTTP请求状态变化的函数.
+ 
+(4)发送HTTP请求.
+ 
+(5)获取异步调用返回的数据.
+ 
+(6)使用JavaScript和DOM实现局部刷新.</pre>
+    <h4>异步加载和延迟加载</h4>
+    <pre>1.异步加载的方案： 动态插入script标签
+2.通过ajax去获取js代码，然后通过eval执行
+3.script标签上添加defer或者async属性
+4.创建并插入iframe，让它异步执行js
+5.延迟加载：有些 js 代码并不是页面初始化的时候就立刻需要的，而稍后的某些情况才需要的。</pre>
+    <h4>前端安全问题？</h4>
+    <pre>（XSS，sql注入，CSRF）
+CSRF：是跨站请求伪造，很明显根据刚刚的解释，他的核心也就是请求伪造，通过伪造身份提交POST和GET请求来进行跨域的攻击。
+ 
+**完成CSRF需要两个步骤：**
+ 
+1.登陆受信任的网站A，在本地生成COOKIE
+ 
+2.在不登出A的情况下，或者本地COOKIE没有过期的情况下，访问危险网站B。</pre>
+    <h4>GET和POST的区别，何时使用POST？</h4>
+    <pre>GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符
+POST：一般用于修改服务器上的资源，对所发送的信息没有限制。
+ 
+GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值，
+也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。
+ 
+然而，在以下情况中，请使用 POST 请求：
+无法使用缓存文件（更新服务器上的文件或数据库）
+向服务器发送大量数据（POST 没有数据量限制）
+发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</pre>
+    <h4>闭包相关问题？</h4>
+    <pre></pre>
+    <h4>写一个通用的事件侦听器函数?</h4>
+    <pre></pre>
+    <h4>Node.js的适用场景？</h4>
+    <pre></pre>
+    <h4>JavaScript原型，原型链 ? 有什么特点？</h4>
+    <pre></pre>
+    <h4>页面重构怎么操作？</h4>
+    <pre></pre>
+    <h4>事件、IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</h4>
+    <pre>1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。  
+ 2. 事件处理机制：IE是事件冒泡、firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件。；
+ 3.  ev.stopPropagation();注意旧ie的方法 ev.cancelBubble = true;</pre>
+    <h4>ajax 是什么?ajax 的交互模型?同步和异步的区别?如何解决跨域问题?</h4>
+    <pre>1. 通过异步模式，提升了用户体验
+ 
+  2. 优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用
+ 
+  3. Ajax在客户端运行，承担了一部分本来由服务器承担的工作，减少了大用户量下的服务器负载。
+ 
+  2. Ajax的最大的特点是什么。
+ 
+Ajax可以实现动态不刷新（局部刷新）
+readyState属性 状态 有5个可取值： 0=未初始化 ，1=启动 2=发送，3=接收，4=完成
+ 
+ajax的缺点
+ 
+  1、ajax不支持浏览器back按钮。
+ 
+  2、安全问题 AJAX暴露了与服务器交互的细节。
+ 
+  3、对搜索引擎的支持比较弱。
+ 
+  4、破坏了程序的异常机制。
+ 
+  5、不容易调试。
+ 
+跨域： jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面</pre>
+    <h4>js对象的深度克隆</h4>
+    <pre></pre>
+    <h4>AMD和CMD 规范的区别？</h4>
+    <pre></pre>
+    <h4>网站重构的理解？</h4>
+    <pre>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI。
+ 
+对于传统的网站来说重构通常是：
+ 
+表格(table)布局改为DIV+CSS
+使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)
+对于移动平台的优化
+针对于SEO进行优化
+深层次的网站重构应该考虑的方面
+ 
+减少代码间的耦合
+让代码保持弹性
+严格按规范编写代码
+设计可扩展的API
+代替旧有的框架、语言(如VB)
+增强用户体验
+通常来说对于速度的优化也包含在重构中
+ 
+压缩JS、CSS、image等前端资源(通常是由服务器来解决)
+程序的性能优化(如数据读写)
+采用CDN来加速资源加载
+对于JS DOM的优化
+HTTP服务器的文件缓存</pre>
+    <h4>js数组去重</h4>
+    <pre></pre>
+</body>
+
+</html>
